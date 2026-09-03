@@ -1,0 +1,12 @@
+{
+  "name": "national-geographic-mini-app-bot",
+  "version": "1.0.0",
+  "description": "National Geographic Telegram Mini App Bot",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
