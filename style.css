@@ -1,5 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 :root{--bg:#050505;--card:#111;--text:#fff;--muted:#999;--accent:#ffcc00;--line:#252525}
+html {
+  background: var(--bg);
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+button,
+a,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
+::selection {
+  background: var(--accent);
+  color: #000;
+}
 *{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}
 body{padding-bottom:calc(82px + env(safe-area-inset-bottom));-webkit-font-smoothing:antialiased}
 button,a{font:inherit;color:inherit}button{border:0;background:none}
@@ -17,3 +46,54 @@ button,a{font:inherit;color:inherit}button{border:0;background:none}
 .empty{text-align:center;color:var(--muted);padding:50px 20px;font-size:13px}
 .bottom-nav{position:fixed;z-index:50;left:0;right:0;bottom:0;padding:8px 8px calc(8px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(5,1fr);background:rgba(8,8,8,.97);border-top:1px solid #202020;backdrop-filter:blur(15px)}.nav-item{display:flex;flex-direction:column;align-items:center;gap:4px;color:#777}.nav-item span{font-size:22px;line-height:20px}.nav-item small{font-size:9px}.nav-item.active{color:#fff}.nav-item.active span{color:var(--accent)}
 @media(min-width:700px){#app{max-width:620px;margin:auto}.bottom-nav{max-width:620px;left:50%;transform:translateX(-50%)}}
+/* Telegram Mini App */
+
+body {
+  padding-top: env(safe-area-inset-top);
+}
+
+.topbar {
+  padding-top: env(safe-area-inset-top);
+  height: calc(64px + env(safe-area-inset-top));
+}
+
+.bottom-nav {
+  padding-bottom: calc(
+    8px + env(safe-area-inset-bottom)
+  );
+}
+
+@media (max-width: 380px) {
+
+  .hero {
+    height: 390px;
+  }
+
+  h1,
+  .page-title h1 {
+    font-size: 28px;
+  }
+
+  .card {
+    grid-template-columns: 96px 1fr;
+  }
+
+  .card img {
+    width: 96px;
+    height: 108px;
+  }
+
+}
+
+@media (min-width: 700px) {
+
+  body {
+    background: #000;
+  }
+
+  #app {
+    background: var(--bg);
+    min-height: 100vh;
+  }
+
+}
